@@ -1,0 +1,24 @@
+{
+  "name": "ass3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "mysql": "^2.18.1",
+    "pug": "^2.0.4",
+    "tether": "^1.4.7"
+  }
+}

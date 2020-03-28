@@ -1,0 +1,46 @@
+<%- include ("../partials/header.ejs") %>
+<div class= "">
+    <div class ="col s12">
+        <a href = "/user/add" class = "btn btn-success btn-lg">Add a new user</a>
+        <a href = "/display" class = "btn btn-success btn-lg">Display users</a>
+
+    </div>
+</div>
+<br>
+
+<div class="=">
+    <div class="col s12">
+        <% if(items.length >0 ){ %>
+            <table class ="table">
+                <thread>
+                    <tr>
+                        <th style = "width: 1%; text-align:center">ID</th>
+                        <th style = "width: 20%" >Name</th>
+                        <th style = "width: 40%" >Email</th>
+                        <th style = "width: 10%">Age</th>
+                        <th solspan = "2" style = "width:20%; text-align: center">Actions</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <% items.forEach(function(item,index){ %>
+                        <tr>
+                            <td style = "width: 1%; text-align: center"> <%= index+1 %> </td>
+                            <td style = "width: 20%"> <%= item.Name %> </td>
+                            <td style = "width: 49%"> <%= item.Email %> </td>
+                            <td style = "width: 10%"> <%= item.Age %> </td>
+                            <td solspan = "2" style="width: 20%; text-align: center">
+                                <a href="/user/edit/<%= item.UserID %>" class ="btn btn-success">Edit</a>
+                                <a href="/user/delete/<%= item.UserID%>" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                   <% }); %>
+                </tbody>
+            </table>
+
+        <% }else{ %>
+            <p><strong>There are no users currently</strong></p>
+        
+        <% } %>
+    </div>
+</div>
+<%- include ("../partials/footer.ejs") %>

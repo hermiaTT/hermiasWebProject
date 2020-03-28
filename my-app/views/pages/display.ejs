@@ -1,0 +1,43 @@
+<%- include ("../partials/header.ejs") %>
+<div class= "">
+    <div class ="col s12">
+        <a href = "/user/add" class = "btn btn-success btn-lg">Add a new event</a>
+    </div>
+</div>
+<br>
+
+<div class="=">
+    <div class="col s12">
+        <% if(items.length >0 ){ %>
+            <table class ="table">
+                <thread>
+                    <tr>
+                        <th style = "width: 1%; text-align:center">ID</th>
+                        <th style = "width: 20%" >Name</th>
+                        <th style = "width: 79%">Age</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <% items.forEach(function(item,index){ %>
+                        <tr>
+                            <td style = "width: 1%; text-align: center"> <%= index+1 %> </td>
+                            <td style = "width: 20%"> <%= item.Name %> </td>
+                            <td style = "width: 79%"> <% for(var i =0; i< item.Age; i++){ %>
+                                <%- "<a>*</a>" %>
+                                          
+                           <% } %> </td>
+                        </tr>
+
+                   <% }); %>
+                </tbody>
+            </table>
+
+        <% }else{ %>
+            <p><strong>There are no users currently</strong></p>
+        
+        <% } %>
+        <a href="/" class="btn btn-danger">Back</a>
+
+    </div>
+</div>
+<%- include ("../partials/footer.ejs") %>
